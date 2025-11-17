@@ -1,6 +1,7 @@
 'use client'
 
 import { ArrowRight, Play } from 'lucide-react'
+import ImageWithLoader from '@/components/ui/image-with-loader'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -60,7 +61,7 @@ export default function Home() {
             </ScrollAnimation>
             <Parallax speed={0.3}>
               <div className="relative">
-                <img
+                <ImageWithLoader
                   src="/professional-music-production-studio-hero-image.jpg"
                   alt="Studio setup"
                   className="w-full h-auto rounded-lg"
@@ -85,7 +86,7 @@ export default function Home() {
               <ScrollAnimation key={idx} direction={idx % 2 === 0 ? 'left' : 'right'} delay={idx * 100}>
                 <Card className="group overflow-hidden hover:border-primary transition-colors cursor-pointer">
                   <div className="relative overflow-hidden bg-muted h-64">
-                    <img
+                    <ImageWithLoader
                       src={track.image || "/placeholder.svg"}
                       alt={track.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

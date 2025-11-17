@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Card } from '@/components/ui/card'
 import { Play } from 'lucide-react'
+import ImageWithLoader from '@/components/ui/image-with-loader'
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -62,7 +63,7 @@ export default function Portfolio() {
           {filtered.map((work, idx) => (
             <Card key={idx} className="group overflow-hidden hover:border-primary transition-colors cursor-pointer">
               <div className="relative overflow-hidden bg-muted h-64">
-                <img
+                <ImageWithLoader
                   src={work.image || "/placeholder.svg"}
                   alt={work.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

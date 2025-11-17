@@ -1,4 +1,5 @@
 import { Card } from '@/components/ui/card'
+import ImageWithLoader from '@/components/ui/image-with-loader'
 
 export default function About() {
   return (
@@ -16,7 +17,7 @@ export default function About() {
                 Our mission is to provide world-class audio production services that combine technical expertise with creative artistry. Every project is treated with the same level of care and attention, regardless of size or budget.
               </p>
             </div>
-            <img
+            <ImageWithLoader
               src="/professional-audio-engineer-in-studio.jpg"
               alt="Studio"
               className="w-full h-auto rounded-lg"
@@ -80,7 +81,7 @@ export default function About() {
               'Technical consultant for audio education programs',
             ].map((achievement, idx) => (
               <li key={idx} className="flex items-start gap-4 p-4 bg-secondary rounded-lg">
-                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1"></div>
+                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center shrink-0 mt-1"></div>
                 <span className="text-foreground">{achievement}</span>
               </li>
             ))}
