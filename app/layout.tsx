@@ -5,6 +5,7 @@ import './globals.css'
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import ThemeProvider from '@/components/theme-provider'
+import Splash from '@/components/splash'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans antialiased`}>
         <ThemeProvider>
+          <Splash />
           <Navigation />
           {children}
           <Footer />
